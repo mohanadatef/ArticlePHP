@@ -1,0 +1,31 @@
+language: php
+
+php:
+    - 5.6
+    - 7.1
+    - hhvm
+
+matrix:
+  include:
+    - php: 5.6
+      env: dependencies=lowest
+    - php: 7.1
+      env: dependencies=lowest
+    - php: hhvm
+      env: dependencies=lowest
+
+services:
+  - memcached
+  - redis-server
+
+before_script:
+    - if [[ $TRAVIS_PHP_VERSION != "hhvm" ]]; then echo "extension = memcached.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi;
+    - if [[ $TRAVIS_PHP_VERSION != "hhvm" ]]; then echo "extension = redis.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi;
+    - if [ -z "$dependencies" ]; then composer install; fi;
+    - if [ "$dependencies" = "lowest" ]; then composer update --prefer-lowest -n; fi;
+    - php tests/Queue/run-queue-app-with-file-cache-driver.php &
+    - php tests/Queue/run-queue-app-with-redis-cache-driver.php &
+    - php tests/Queue/run-queue-app-with-memcached-cache-driver.php &
+
+script:
+  - vendor/bin/phpunit

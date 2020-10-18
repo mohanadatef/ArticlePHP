@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Approach" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ApproachPrintingCenter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/articlephp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../Estsharion" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../capitalmed" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../center" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../cms" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ekshaf-dashboard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../ekshef-api" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../fekerty_website_dashboard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../sharaw" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../studyingabroad_ui" vcs="Git" />
+  </component>
+</project>
