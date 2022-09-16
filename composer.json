@@ -19,7 +19,7 @@
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.4.0",
         "maatwebsite/excel": "^3.1",
-        "react/http": "0.8.3",
+        "react/http": "1.7.0",
         "rgilyov/laravel-csv-importer": "^1.0",
         "rosell-dk/webp-convert": "^2.1",
         "unisharp/laravel-ckeditor": "^4.7",
